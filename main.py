@@ -1,7 +1,6 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 from pyspark.sql.types import DoubleType, StringType
-import os
 import spark_funcs
 
 
@@ -66,11 +65,11 @@ get_geohash = udf(lambda x, y: spark_funcs.get_geohash(x, y), StringType())
 
 def main():
     # Initializing credentials from environment variables
-    storage_account = os.environ['STORAGE_ACCOUNT_NAME']
-    app_id = os.environ['APP_ID']
-    service_cred = os.environ['SECRET']
-    dir_id = os.environ['DIRECTORY_ID']
-    container_name = os.environ['CONTAINER_NAME']
+    storage_account = 
+    app_id = 
+    service_cred = 
+    dir_id = 
+    container_name = 
 
     # Initializing Spark session
     spark = start_spark_azure(storage_account, app_id, service_cred, dir_id)
